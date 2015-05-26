@@ -9,9 +9,9 @@
 #import "TIOCustomTableViewController.h"
 #import "TIOCustomCell.h"
 
-@interface TIOCustomTableViewController ()
+@interface TIOCustomTableViewController () <TIOCustomCellDelegate>
 
-@property (copy, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) NSArray *dataSource;
 
 @end
 
@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@[@"1", @"2", @"3"], @[@"4", @"5", @"6", @"7", @"8", @"9"], @[@"10"]];
+    self.dataSource = @[@[@"1", @"2", @"3"], @[@"4", @"5", @"6", @"7", @"8", @"9"], @[@"10"], @[@"11"]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -32,6 +32,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TIOCustomCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
+    tableViewCell.delegate = self;
     if (tableViewCell) {
         NSArray *rows = [self.dataSource objectAtIndex:indexPath.section];
         [tableViewCell populateFields:[rows objectAtIndex:indexPath.row]];
@@ -53,6 +54,12 @@
                                                                   20.0f)];
     headerView.backgroundColor = [UIColor redColor];
     return headerView;
+}
+
+#pragma mark - Cell Delegate
+
+- (void)returnNumber:(NSString *)number {
+    self.completionBlock(number);
 }
 
 @end

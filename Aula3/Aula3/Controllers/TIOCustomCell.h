@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TIOCustomCellDelegate;
+
 @interface TIOCustomCell : UITableViewCell
 
+@property (weak, nonatomic) id<TIOCustomCellDelegate> delegate;
+
 - (void)populateFields:(NSString *)object;
+
+@end
+
+@protocol TIOCustomCellDelegate <NSObject>
+
+- (void)returnNumber:(NSString *)number;
 
 @end

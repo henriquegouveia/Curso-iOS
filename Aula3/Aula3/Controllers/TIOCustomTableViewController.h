@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^TIOTableCompletionBlock)(NSString *number);
+
+@protocol TIOCustomTableViewDelegate;
+
 @interface TIOCustomTableViewController : UITableViewController
+
+@property (copy, nonatomic) TIOTableCompletionBlock completionBlock;
+
+@property (weak, nonatomic) id<TIOCustomTableViewDelegate> delegate;
+
+@end
+
+@protocol TIOCustomTableViewDelegate <NSObject>
+
+- (void)showCellNumber:(NSString *)number;
 
 @end

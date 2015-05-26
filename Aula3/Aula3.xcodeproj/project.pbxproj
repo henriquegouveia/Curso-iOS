@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE1503D01B150B2F00C135C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1503CF1B150B2F00C135C6 /* main.m */; };
 		AE1503D31B150B2F00C135C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1503D21B150B2F00C135C6 /* AppDelegate.m */; };
-		AE1503D61B150B2F00C135C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1503D51B150B2F00C135C6 /* ViewController.m */; };
+		AE1503D61B150B2F00C135C6 /* TIODashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1503D51B150B2F00C135C6 /* TIODashboardController.m */; };
 		AE1503D91B150B2F00C135C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1503D71B150B2F00C135C6 /* Main.storyboard */; };
 		AE1503DB1B150B2F00C135C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1503DA1B150B2F00C135C6 /* Images.xcassets */; };
 		AE1503DE1B150B2F00C135C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1503DC1B150B2F00C135C6 /* LaunchScreen.xib */; };
@@ -17,6 +17,7 @@
 		AE1503F61B150C8400C135C6 /* TIOCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1503F51B150C8400C135C6 /* TIOCustomTableViewController.m */; };
 		AE1503FA1B15111F00C135C6 /* TIOCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1503F91B15111F00C135C6 /* TIOCustomCell.m */; };
 		AE1503FC1B1512AE00C135C6 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1503FB1B1512AE00C135C6 /* img1.png */; };
+		AE1504031B1536E700C135C6 /* TIODashboardVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1504021B1536E700C135C6 /* TIODashboardVIew.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,8 @@
 		AE1503CF1B150B2F00C135C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE1503D11B150B2F00C135C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE1503D21B150B2F00C135C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AE1503D41B150B2F00C135C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AE1503D51B150B2F00C135C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE1503D41B150B2F00C135C6 /* TIODashboardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIODashboardController.h; sourceTree = "<group>"; };
+		AE1503D51B150B2F00C135C6 /* TIODashboardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIODashboardController.m; sourceTree = "<group>"; };
 		AE1503D81B150B2F00C135C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE1503DA1B150B2F00C135C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AE1503DD1B150B2F00C135C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +49,8 @@
 		AE1503F81B15111F00C135C6 /* TIOCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIOCustomCell.h; path = Controllers/TIOCustomCell.h; sourceTree = "<group>"; };
 		AE1503F91B15111F00C135C6 /* TIOCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIOCustomCell.m; path = Controllers/TIOCustomCell.m; sourceTree = "<group>"; };
 		AE1503FB1B1512AE00C135C6 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		AE1504011B1536E700C135C6 /* TIODashboardVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIODashboardVIew.h; path = VIew/TIODashboardVIew.h; sourceTree = "<group>"; };
+		AE1504021B1536E700C135C6 /* TIODashboardVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIODashboardVIew.m; path = VIew/TIODashboardVIew.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +92,12 @@
 		AE1503CC1B150B2F00C135C6 /* Aula3 */ = {
 			isa = PBXGroup;
 			children = (
+				AE1504001B1536C000C135C6 /* Views */,
 				AE1503F31B150C6900C135C6 /* Controller */,
 				AE1503D11B150B2F00C135C6 /* AppDelegate.h */,
 				AE1503D21B150B2F00C135C6 /* AppDelegate.m */,
-				AE1503D41B150B2F00C135C6 /* ViewController.h */,
-				AE1503D51B150B2F00C135C6 /* ViewController.m */,
+				AE1503D41B150B2F00C135C6 /* TIODashboardController.h */,
+				AE1503D51B150B2F00C135C6 /* TIODashboardController.m */,
 				AE1503D71B150B2F00C135C6 /* Main.storyboard */,
 				AE1503DA1B150B2F00C135C6 /* Images.xcassets */,
 				AE1503DC1B150B2F00C135C6 /* LaunchScreen.xib */,
@@ -146,6 +150,15 @@
 				AE1503F91B15111F00C135C6 /* TIOCustomCell.m */,
 			);
 			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		AE1504001B1536C000C135C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE1504011B1536E700C135C6 /* TIODashboardVIew.h */,
+				AE1504021B1536E700C135C6 /* TIODashboardVIew.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE1503D61B150B2F00C135C6 /* ViewController.m in Sources */,
+				AE1503D61B150B2F00C135C6 /* TIODashboardController.m in Sources */,
 				AE1503D31B150B2F00C135C6 /* AppDelegate.m in Sources */,
+				AE1504031B1536E700C135C6 /* TIODashboardVIew.m in Sources */,
 				AE1503D01B150B2F00C135C6 /* main.m in Sources */,
 				AE1503FA1B15111F00C135C6 /* TIOCustomCell.m in Sources */,
 				AE1503F61B150C8400C135C6 /* TIOCustomTableViewController.m in Sources */,

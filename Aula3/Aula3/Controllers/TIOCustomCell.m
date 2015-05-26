@@ -9,6 +9,7 @@
 #import "TIOCustomCell.h"
 
 @interface TIOCustomCell ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
@@ -17,7 +18,7 @@
 @implementation TIOCustomCell
 
 - (IBAction)showLabelValue:(id)sender {
-    [[[UIAlertView alloc] initWithTitle:@"Message" message:self.nameLabel.text delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [self.delegate returnNumber:self.nameLabel.text];
 }
 
 - (void)populateFields:(NSString *)object {
