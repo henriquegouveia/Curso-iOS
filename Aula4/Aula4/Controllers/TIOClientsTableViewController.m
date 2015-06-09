@@ -24,13 +24,7 @@
     
     typeof(self) __block weakSelf = self;
     
-    [TIOHTTPClient getClientsWithCompletionBlock:^(NSArray *clients) {
-        weakSelf.dataSource = clients;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.tableView reloadData];
-            self.didFinishServiceBlock(clients.count);
-        });
-    }];
+//call the service here
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -45,7 +39,6 @@
     TIOClientCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClientCustomCell"];
     if (cell) {
         TIOClient *client = [self.dataSource objectAtIndex:indexPath.row];
-        [cell populateCellWithEntity:client];
     }
     
     return cell;

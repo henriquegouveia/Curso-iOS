@@ -19,24 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [TIOHTTPClient getClientsWithCompletionBlock:^(NSArray *clients) {
-        //
-    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"firstToSecond"]) {
         TIOSecondViewController *secondViewController = (TIOSecondViewController *)segue.destinationViewController;
 //        secondViewController.delegate = self;
-        NSString *__block test = nil;
         
         [secondViewController setCompletionBlock:^(NSString *text, BOOL succes) {
             [self.mainView changeLabelText:text];
-            test = @"henrique";
         }];
-        
-        test = @"gouveia";
     }
 }
 

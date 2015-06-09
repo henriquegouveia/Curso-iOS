@@ -13,26 +13,4 @@ static NSString * const kBaseURL = @"http://private-9f905-citbase.apiary-mock.co
 
 @implementation TIOHTTPClient
 
-+ (void)getClientsWithCompletionBlock:(void(^)(NSArray *clients))completion {
-    NSURL *url = [NSURL URLWithString:kBaseURL];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestReloadRevalidatingCacheData
-                                                       timeoutInterval:NSIntegerMax];
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithRequest:request
-                                                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                                                 NSArray *clientsJSON = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                                                        options:NSJSONReadingAllowFragments
-                                                                                                                                          error:nil];
-                                                                                 NSMutableArray *clients = [NSMutableArray array];
-                                                                                 for (NSDictionary *clientJSON in clientsJSON) {
-                                                                                     TIOClient *client = [TIOClient clientFromJSON:clientJSON];
-                                                                                     [clients addObject:client];
-                                                                                 }
-                                                                                 completion(clients);
-                                                                             }];
-    [downloadTask resume];
-}
-
 @end
