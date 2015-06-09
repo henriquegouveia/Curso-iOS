@@ -10,4 +10,6 @@
 
 @interface TIOHTTPClient : NSObject
 
++(void) getClientsWithCompletionBlock : (void(^)(NSMutableArray *clients))completionBlock;
+
 @end

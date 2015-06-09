@@ -24,6 +24,7 @@
     TIOClientsTableViewController *clientsController = (TIOClientsTableViewController *)segue.destinationViewController;
     [clientsController setDidFinishServiceBlock:^(BOOL success) {
         [self.mainView dismissLoadingView];
+        
         if (!success) {
             [self showServiceError];
         }

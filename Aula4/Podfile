@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'Aula4' do
+
+pod 'AFNetworking'
+
+end
+
+target 'Aula4Tests' do
+
+end
+

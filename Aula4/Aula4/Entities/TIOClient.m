@@ -11,7 +11,14 @@
 @implementation TIOClient
 
 + (instancetype)clientFromJSON:(NSDictionary *)jsonObject {
-    return nil;
+    TIOClient *tioClient = [TIOClient new];
+    tioClient.email = [jsonObject objectForKey:@"email"];
+    tioClient.identifier = [jsonObject objectForKey:@"id"];
+    tioClient.firstName = [jsonObject objectForKey:@"firstName"];
+    tioClient.lastName = [jsonObject objectForKey:@"lastName"];
+    tioClient.gender = [jsonObject objectForKey:@"gender"];
+    tioClient.phoneNumber = [jsonObject objectForKey:@"phoneNumber"];
+    return tioClient;
 }
 
 @end
