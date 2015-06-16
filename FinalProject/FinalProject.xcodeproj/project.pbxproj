@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93ECDF351903FF2B8EC1AD29 /* libPods-FinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 632A5455229FDF0DC6B2B0AA /* libPods-FinalProject.a */; };
+		AEC433C91AA7D263000F1CA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433C81AA7D263000F1CA8 /* main.m */; };
+		AEC433CC1AA7D263000F1CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433CB1AA7D263000F1CA8 /* AppDelegate.m */; };
+		AEC433D21AA7D263000F1CA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC433D01AA7D263000F1CA8 /* Main.storyboard */; };
+		AEC433D41AA7D263000F1CA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC433D31AA7D263000F1CA8 /* Images.xcassets */; };
+		AEC433D71AA7D263000F1CA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC433D51AA7D263000F1CA8 /* LaunchScreen.xib */; };
+		AEC433E31AA7D263000F1CA8 /* FinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433E21AA7D263000F1CA8 /* FinalProjectTests.m */; };
+		AEC434171AA7D2FD000F1CA8 /* CITDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433F11AA7D2FD000F1CA8 /* CITDataAccess.m */; };
+		AEC434181AA7D2FD000F1CA8 /* CITDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433F31AA7D2FD000F1CA8 /* CITDatabaseManager.m */; };
+		AEC434191AA7D2FD000F1CA8 /* CITDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433F51AA7D2FD000F1CA8 /* CITDatabaseQueue.m */; };
+		AEC4341A1AA7D2FD000F1CA8 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433F91AA7D2FD000F1CA8 /* NSArray+Additions.m */; };
+		AEC4341B1AA7D2FD000F1CA8 /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433FB1AA7D2FD000F1CA8 /* NSData+Additions.m */; };
+		AEC4341C1AA7D2FD000F1CA8 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433FD1AA7D2FD000F1CA8 /* NSString+Additions.m */; };
+		AEC4341D1AA7D2FD000F1CA8 /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC433FF1AA7D2FD000F1CA8 /* UIButton+Additions.m */; };
+		AEC4341E1AA7D2FD000F1CA8 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434011AA7D2FD000F1CA8 /* UIColor+Additions.m */; };
+		AEC4341F1AA7D2FD000F1CA8 /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434031AA7D2FD000F1CA8 /* UIDevice+Additions.m */; };
+		AEC434201AA7D2FD000F1CA8 /* UILabel+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434051AA7D2FD000F1CA8 /* UILabel+Additions.m */; };
+		AEC434211AA7D2FD000F1CA8 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434071AA7D2FD000F1CA8 /* UIView+Animations.m */; };
+		AEC434221AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4340A1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m */; };
+		AEC434231AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4340C1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.m */; };
+		AEC434241AA7D2FD000F1CA8 /* CITHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4340E1AA7D2FD000F1CA8 /* CITHTTPSessionManager.m */; };
+		AEC434251AA7D2FD000F1CA8 /* CITDataAccess+Clients.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434111AA7D2FD000F1CA8 /* CITDataAccess+Clients.m */; };
+		AEC434261AA7D2FD000F1CA8 /* CITDatabaseSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434131AA7D2FD000F1CA8 /* CITDatabaseSchema.m */; };
+		AEC4342B1AA7D383000F1CA8 /* CITMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4342A1AA7D383000F1CA8 /* CITMenuViewController.m */; };
+		AEC434331AA7D652000F1CA8 /* CITLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434321AA7D652000F1CA8 /* CITLoginViewController.m */; };
+		AEC434371AA7D688000F1CA8 /* CITClientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434361AA7D688000F1CA8 /* CITClientsTableViewController.m */; };
+		AEC4343B1AA7D809000F1CA8 /* CITKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4343A1AA7D809000F1CA8 /* CITKeychain.m */; };
+		AEC4343E1AA7F05F000F1CA8 /* CITClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4343D1AA7F05F000F1CA8 /* CITClient.m */; };
+		AEC434421AA7F7BD000F1CA8 /* CITClientCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434411AA7F7BD000F1CA8 /* CITClientCustomCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEC433DD1AA7D263000F1CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEC433BB1AA7D263000F1CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEC433C21AA7D263000F1CA8;
+			remoteInfo = FinalProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EC5A6F05F650563DB9CD71E /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		4E743903973C7E709126B24E /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		632A5455229FDF0DC6B2B0AA /* libPods-FinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC433C31AA7D263000F1CA8 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC433C71AA7D263000F1CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC433C81AA7D263000F1CA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEC433CA1AA7D263000F1CA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEC433CB1AA7D263000F1CA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEC433D11AA7D263000F1CA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEC433D31AA7D263000F1CA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AEC433D61AA7D263000F1CA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AEC433DC1AA7D263000F1CA8 /* FinalProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC433E11AA7D263000F1CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC433E21AA7D263000F1CA8 /* FinalProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinalProjectTests.m; sourceTree = "<group>"; };
+		AEC433F01AA7D2FD000F1CA8 /* CITDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITDataAccess.h; sourceTree = "<group>"; };
+		AEC433F11AA7D2FD000F1CA8 /* CITDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITDataAccess.m; sourceTree = "<group>"; };
+		AEC433F21AA7D2FD000F1CA8 /* CITDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITDatabaseManager.h; sourceTree = "<group>"; };
+		AEC433F31AA7D2FD000F1CA8 /* CITDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITDatabaseManager.m; sourceTree = "<group>"; };
+		AEC433F41AA7D2FD000F1CA8 /* CITDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITDatabaseQueue.h; sourceTree = "<group>"; };
+		AEC433F51AA7D2FD000F1CA8 /* CITDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITDatabaseQueue.m; sourceTree = "<group>"; };
+		AEC433F81AA7D2FD000F1CA8 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		AEC433F91AA7D2FD000F1CA8 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		AEC433FA1AA7D2FD000F1CA8 /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		AEC433FB1AA7D2FD000F1CA8 /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
+		AEC433FC1AA7D2FD000F1CA8 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		AEC433FD1AA7D2FD000F1CA8 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		AEC433FE1AA7D2FD000F1CA8 /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
+		AEC433FF1AA7D2FD000F1CA8 /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Additions.m"; sourceTree = "<group>"; };
+		AEC434001AA7D2FD000F1CA8 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		AEC434011AA7D2FD000F1CA8 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		AEC434021AA7D2FD000F1CA8 /* UIDevice+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Additions.h"; sourceTree = "<group>"; };
+		AEC434031AA7D2FD000F1CA8 /* UIDevice+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additions.m"; sourceTree = "<group>"; };
+		AEC434041AA7D2FD000F1CA8 /* UILabel+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Additions.h"; sourceTree = "<group>"; };
+		AEC434051AA7D2FD000F1CA8 /* UILabel+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Additions.m"; sourceTree = "<group>"; };
+		AEC434061AA7D2FD000F1CA8 /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
+		AEC434071AA7D2FD000F1CA8 /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
+		AEC434091AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CITHTTPSessionManager+Clients.h"; sourceTree = "<group>"; };
+		AEC4340A1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CITHTTPSessionManager+Clients.m"; sourceTree = "<group>"; };
+		AEC4340B1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CITHTTPSessionManager+Login.h"; sourceTree = "<group>"; };
+		AEC4340C1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CITHTTPSessionManager+Login.m"; sourceTree = "<group>"; };
+		AEC4340D1AA7D2FD000F1CA8 /* CITHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITHTTPSessionManager.h; sourceTree = "<group>"; };
+		AEC4340E1AA7D2FD000F1CA8 /* CITHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITHTTPSessionManager.m; sourceTree = "<group>"; };
+		AEC434101AA7D2FD000F1CA8 /* CITDataAccess+Clients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CITDataAccess+Clients.h"; sourceTree = "<group>"; };
+		AEC434111AA7D2FD000F1CA8 /* CITDataAccess+Clients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CITDataAccess+Clients.m"; sourceTree = "<group>"; };
+		AEC434121AA7D2FD000F1CA8 /* CITDatabaseSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITDatabaseSchema.h; sourceTree = "<group>"; };
+		AEC434131AA7D2FD000F1CA8 /* CITDatabaseSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITDatabaseSchema.m; sourceTree = "<group>"; };
+		AEC434291AA7D383000F1CA8 /* CITMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CITMenuViewController.h; path = Controllers/CITMenuViewController.h; sourceTree = "<group>"; };
+		AEC4342A1AA7D383000F1CA8 /* CITMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CITMenuViewController.m; path = Controllers/CITMenuViewController.m; sourceTree = "<group>"; };
+		AEC4342C1AA7D3C5000F1CA8 /* CITBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITBlocks.h; sourceTree = "<group>"; };
+		AEC4342D1AA7D3F6000F1CA8 /* CITEntityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITEntityProtocol.h; sourceTree = "<group>"; };
+		AEC434311AA7D652000F1CA8 /* CITLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CITLoginViewController.h; path = Controllers/CITLoginViewController.h; sourceTree = "<group>"; };
+		AEC434321AA7D652000F1CA8 /* CITLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CITLoginViewController.m; path = Controllers/CITLoginViewController.m; sourceTree = "<group>"; };
+		AEC434351AA7D688000F1CA8 /* CITClientsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CITClientsTableViewController.h; path = Controllers/CITClientsTableViewController.h; sourceTree = "<group>"; };
+		AEC434361AA7D688000F1CA8 /* CITClientsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CITClientsTableViewController.m; path = Controllers/CITClientsTableViewController.m; sourceTree = "<group>"; };
+		AEC434391AA7D809000F1CA8 /* CITKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITKeychain.h; sourceTree = "<group>"; };
+		AEC4343A1AA7D809000F1CA8 /* CITKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITKeychain.m; sourceTree = "<group>"; };
+		AEC4343C1AA7F05F000F1CA8 /* CITClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITClient.h; sourceTree = "<group>"; };
+		AEC4343D1AA7F05F000F1CA8 /* CITClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITClient.m; sourceTree = "<group>"; };
+		AEC434401AA7F7BD000F1CA8 /* CITClientCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CITClientCustomCell.h; path = Controllers/CITClientCustomCell.h; sourceTree = "<group>"; };
+		AEC434411AA7F7BD000F1CA8 /* CITClientCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CITClientCustomCell.m; path = Controllers/CITClientCustomCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEC433C01AA7D263000F1CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93ECDF351903FF2B8EC1AD29 /* libPods-FinalProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC433D91AA7D263000F1CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CF5BD1E0F601F84F20E977A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				632A5455229FDF0DC6B2B0AA /* libPods-FinalProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		324012814B2A6A307FBE4987 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E743903973C7E709126B24E /* Pods-FinalProject.debug.xcconfig */,
+				2EC5A6F05F650563DB9CD71E /* Pods-FinalProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEC433BA1AA7D263000F1CA8 = {
+			isa = PBXGroup;
+			children = (
+				AEC433C51AA7D263000F1CA8 /* FinalProject */,
+				AEC433DF1AA7D263000F1CA8 /* FinalProjectTests */,
+				AEC433C41AA7D263000F1CA8 /* Products */,
+				324012814B2A6A307FBE4987 /* Pods */,
+				1CF5BD1E0F601F84F20E977A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEC433C41AA7D263000F1CA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433C31AA7D263000F1CA8 /* FinalProject.app */,
+				AEC433DC1AA7D263000F1CA8 /* FinalProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEC433C51AA7D263000F1CA8 /* FinalProject */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433F61AA7D2FD000F1CA8 /* CITFoundation */,
+				AEC434081AA7D2FD000F1CA8 /* Connection */,
+				AEC4340F1AA7D2FD000F1CA8 /* Database */,
+				AEC434141AA7D2FD000F1CA8 /* Entities */,
+				AEC434281AA7D33E000F1CA8 /* Controllers */,
+				AEC433CA1AA7D263000F1CA8 /* AppDelegate.h */,
+				AEC433CB1AA7D263000F1CA8 /* AppDelegate.m */,
+				AEC433D01AA7D263000F1CA8 /* Main.storyboard */,
+				AEC433D31AA7D263000F1CA8 /* Images.xcassets */,
+				AEC433D51AA7D263000F1CA8 /* LaunchScreen.xib */,
+				AEC433C61AA7D263000F1CA8 /* Supporting Files */,
+			);
+			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		AEC433C61AA7D263000F1CA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433C71AA7D263000F1CA8 /* Info.plist */,
+				AEC433C81AA7D263000F1CA8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEC433DF1AA7D263000F1CA8 /* FinalProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433E21AA7D263000F1CA8 /* FinalProjectTests.m */,
+				AEC433E01AA7D263000F1CA8 /* Supporting Files */,
+			);
+			path = FinalProjectTests;
+			sourceTree = "<group>";
+		};
+		AEC433E01AA7D263000F1CA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433E11AA7D263000F1CA8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEC433EF1AA7D2FD000F1CA8 /* CITDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433F01AA7D2FD000F1CA8 /* CITDataAccess.h */,
+				AEC433F11AA7D2FD000F1CA8 /* CITDataAccess.m */,
+				AEC433F21AA7D2FD000F1CA8 /* CITDatabaseManager.h */,
+				AEC433F31AA7D2FD000F1CA8 /* CITDatabaseManager.m */,
+				AEC433F41AA7D2FD000F1CA8 /* CITDatabaseQueue.h */,
+				AEC433F51AA7D2FD000F1CA8 /* CITDatabaseQueue.m */,
+			);
+			name = CITDatabase;
+			path = ../CITDatabase;
+			sourceTree = "<group>";
+		};
+		AEC433F61AA7D2FD000F1CA8 /* CITFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433EF1AA7D2FD000F1CA8 /* CITDatabase */,
+				AEC434381AA7D809000F1CA8 /* CITSecurity */,
+				AEC433F71AA7D2FD000F1CA8 /* Additions */,
+			);
+			path = CITFoundation;
+			sourceTree = "<group>";
+		};
+		AEC433F71AA7D2FD000F1CA8 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				AEC433F81AA7D2FD000F1CA8 /* NSArray+Additions.h */,
+				AEC433F91AA7D2FD000F1CA8 /* NSArray+Additions.m */,
+				AEC433FA1AA7D2FD000F1CA8 /* NSData+Additions.h */,
+				AEC433FB1AA7D2FD000F1CA8 /* NSData+Additions.m */,
+				AEC433FC1AA7D2FD000F1CA8 /* NSString+Additions.h */,
+				AEC433FD1AA7D2FD000F1CA8 /* NSString+Additions.m */,
+				AEC433FE1AA7D2FD000F1CA8 /* UIButton+Additions.h */,
+				AEC433FF1AA7D2FD000F1CA8 /* UIButton+Additions.m */,
+				AEC434001AA7D2FD000F1CA8 /* UIColor+Additions.h */,
+				AEC434011AA7D2FD000F1CA8 /* UIColor+Additions.m */,
+				AEC434021AA7D2FD000F1CA8 /* UIDevice+Additions.h */,
+				AEC434031AA7D2FD000F1CA8 /* UIDevice+Additions.m */,
+				AEC434041AA7D2FD000F1CA8 /* UILabel+Additions.h */,
+				AEC434051AA7D2FD000F1CA8 /* UILabel+Additions.m */,
+				AEC434061AA7D2FD000F1CA8 /* UIView+Animations.h */,
+				AEC434071AA7D2FD000F1CA8 /* UIView+Animations.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		AEC434081AA7D2FD000F1CA8 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				AEC4342C1AA7D3C5000F1CA8 /* CITBlocks.h */,
+				AEC4340D1AA7D2FD000F1CA8 /* CITHTTPSessionManager.h */,
+				AEC4340E1AA7D2FD000F1CA8 /* CITHTTPSessionManager.m */,
+				AEC434091AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.h */,
+				AEC4340A1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m */,
+				AEC4340B1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.h */,
+				AEC4340C1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.m */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		AEC4340F1AA7D2FD000F1CA8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AEC434101AA7D2FD000F1CA8 /* CITDataAccess+Clients.h */,
+				AEC434111AA7D2FD000F1CA8 /* CITDataAccess+Clients.m */,
+				AEC434121AA7D2FD000F1CA8 /* CITDatabaseSchema.h */,
+				AEC434131AA7D2FD000F1CA8 /* CITDatabaseSchema.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		AEC434141AA7D2FD000F1CA8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AEC4342D1AA7D3F6000F1CA8 /* CITEntityProtocol.h */,
+				AEC4343C1AA7F05F000F1CA8 /* CITClient.h */,
+				AEC4343D1AA7F05F000F1CA8 /* CITClient.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AEC434281AA7D33E000F1CA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEC434301AA7D62A000F1CA8 /* Clients */,
+				AEC4342F1AA7D620000F1CA8 /* Login */,
+				AEC4342E1AA7D616000F1CA8 /* Menu */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AEC4342E1AA7D616000F1CA8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AEC434291AA7D383000F1CA8 /* CITMenuViewController.h */,
+				AEC4342A1AA7D383000F1CA8 /* CITMenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		AEC4342F1AA7D620000F1CA8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AEC434311AA7D652000F1CA8 /* CITLoginViewController.h */,
+				AEC434321AA7D652000F1CA8 /* CITLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		AEC434301AA7D62A000F1CA8 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				AEC4343F1AA7F7A5000F1CA8 /* CustomCell */,
+				AEC434351AA7D688000F1CA8 /* CITClientsTableViewController.h */,
+				AEC434361AA7D688000F1CA8 /* CITClientsTableViewController.m */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		AEC434381AA7D809000F1CA8 /* CITSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				AEC434391AA7D809000F1CA8 /* CITKeychain.h */,
+				AEC4343A1AA7D809000F1CA8 /* CITKeychain.m */,
+			);
+			path = CITSecurity;
+			sourceTree = "<group>";
+		};
+		AEC4343F1AA7F7A5000F1CA8 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				AEC434401AA7F7BD000F1CA8 /* CITClientCustomCell.h */,
+				AEC434411AA7F7BD000F1CA8 /* CITClientCustomCell.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEC433C21AA7D263000F1CA8 /* FinalProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC433E61AA7D263000F1CA8 /* Build configuration list for PBXNativeTarget "FinalProject" */;
+			buildPhases = (
+				DB33F54FF58A1D985E7A4B5F /* Check Pods Manifest.lock */,
+				AEC433BF1AA7D263000F1CA8 /* Sources */,
+				AEC433C01AA7D263000F1CA8 /* Frameworks */,
+				AEC433C11AA7D263000F1CA8 /* Resources */,
+				2C82867A6E6FE3F5258F0D7E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinalProject;
+			productName = FinalProject;
+			productReference = AEC433C31AA7D263000F1CA8 /* FinalProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEC433DB1AA7D263000F1CA8 /* FinalProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC433E91AA7D263000F1CA8 /* Build configuration list for PBXNativeTarget "FinalProjectTests" */;
+			buildPhases = (
+				AEC433D81AA7D263000F1CA8 /* Sources */,
+				AEC433D91AA7D263000F1CA8 /* Frameworks */,
+				AEC433DA1AA7D263000F1CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEC433DE1AA7D263000F1CA8 /* PBXTargetDependency */,
+			);
+			name = FinalProjectTests;
+			productName = FinalProjectTests;
+			productReference = AEC433DC1AA7D263000F1CA8 /* FinalProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEC433BB1AA7D263000F1CA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CIT;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Henrique Gouveia";
+				TargetAttributes = {
+					AEC433C21AA7D263000F1CA8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					AEC433DB1AA7D263000F1CA8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = AEC433C21AA7D263000F1CA8;
+					};
+				};
+			};
+			buildConfigurationList = AEC433BE1AA7D263000F1CA8 /* Build configuration list for PBXProject "FinalProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEC433BA1AA7D263000F1CA8;
+			productRefGroup = AEC433C41AA7D263000F1CA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEC433C21AA7D263000F1CA8 /* FinalProject */,
+				AEC433DB1AA7D263000F1CA8 /* FinalProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEC433C11AA7D263000F1CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC433D21AA7D263000F1CA8 /* Main.storyboard in Resources */,
+				AEC433D71AA7D263000F1CA8 /* LaunchScreen.xib in Resources */,
+				AEC433D41AA7D263000F1CA8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC433DA1AA7D263000F1CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C82867A6E6FE3F5258F0D7E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB33F54FF58A1D985E7A4B5F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEC433BF1AA7D263000F1CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC4341F1AA7D2FD000F1CA8 /* UIDevice+Additions.m in Sources */,
+				AEC434241AA7D2FD000F1CA8 /* CITHTTPSessionManager.m in Sources */,
+				AEC434421AA7F7BD000F1CA8 /* CITClientCustomCell.m in Sources */,
+				AEC4342B1AA7D383000F1CA8 /* CITMenuViewController.m in Sources */,
+				AEC434231AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.m in Sources */,
+				AEC434191AA7D2FD000F1CA8 /* CITDatabaseQueue.m in Sources */,
+				AEC434221AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m in Sources */,
+				AEC4341C1AA7D2FD000F1CA8 /* NSString+Additions.m in Sources */,
+				AEC434251AA7D2FD000F1CA8 /* CITDataAccess+Clients.m in Sources */,
+				AEC4343B1AA7D809000F1CA8 /* CITKeychain.m in Sources */,
+				AEC433CC1AA7D263000F1CA8 /* AppDelegate.m in Sources */,
+				AEC434261AA7D2FD000F1CA8 /* CITDatabaseSchema.m in Sources */,
+				AEC433C91AA7D263000F1CA8 /* main.m in Sources */,
+				AEC4341D1AA7D2FD000F1CA8 /* UIButton+Additions.m in Sources */,
+				AEC434201AA7D2FD000F1CA8 /* UILabel+Additions.m in Sources */,
+				AEC4341E1AA7D2FD000F1CA8 /* UIColor+Additions.m in Sources */,
+				AEC4341B1AA7D2FD000F1CA8 /* NSData+Additions.m in Sources */,
+				AEC434171AA7D2FD000F1CA8 /* CITDataAccess.m in Sources */,
+				AEC434331AA7D652000F1CA8 /* CITLoginViewController.m in Sources */,
+				AEC4341A1AA7D2FD000F1CA8 /* NSArray+Additions.m in Sources */,
+				AEC434371AA7D688000F1CA8 /* CITClientsTableViewController.m in Sources */,
+				AEC4343E1AA7F05F000F1CA8 /* CITClient.m in Sources */,
+				AEC434211AA7D2FD000F1CA8 /* UIView+Animations.m in Sources */,
+				AEC434181AA7D2FD000F1CA8 /* CITDatabaseManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC433D81AA7D263000F1CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC433E31AA7D263000F1CA8 /* FinalProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEC433DE1AA7D263000F1CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEC433C21AA7D263000F1CA8 /* FinalProject */;
+			targetProxy = AEC433DD1AA7D263000F1CA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEC433D01AA7D263000F1CA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC433D11AA7D263000F1CA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEC433D51AA7D263000F1CA8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC433D61AA7D263000F1CA8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEC433E41AA7D263000F1CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEC433E51AA7D263000F1CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEC433E71AA7D263000F1CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E743903973C7E709126B24E /* Pods-FinalProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FinalProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AEC433E81AA7D263000F1CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC5A6F05F650563DB9CD71E /* Pods-FinalProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FinalProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AEC433EA1AA7D263000F1CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FinalProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalProject.app/FinalProject";
+			};
+			name = Debug;
+		};
+		AEC433EB1AA7D263000F1CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FinalProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalProject.app/FinalProject";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEC433BE1AA7D263000F1CA8 /* Build configuration list for PBXProject "FinalProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC433E41AA7D263000F1CA8 /* Debug */,
+				AEC433E51AA7D263000F1CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEC433E61AA7D263000F1CA8 /* Build configuration list for PBXNativeTarget "FinalProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC433E71AA7D263000F1CA8 /* Debug */,
+				AEC433E81AA7D263000F1CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEC433E91AA7D263000F1CA8 /* Build configuration list for PBXNativeTarget "FinalProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC433EA1AA7D263000F1CA8 /* Debug */,
+				AEC433EB1AA7D263000F1CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEC433BB1AA7D263000F1CA8 /* Project object */;
+}

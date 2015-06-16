@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzn-Fd-4Ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="342"/>
+            <point key="canvasLocation" x="-330" y="342"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -71,28 +71,13 @@
                                     <segue destination="3jS-LI-Va5" kind="embed" identifier="firstToSecond" id="49k-3c-LHg"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyq-dK-t35">
-                                <rect key="frame" x="197" y="67" width="206" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.093351184970000001" blue="0.1068982317" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="206" id="ebR-x2-kOt"/>
-                                    <constraint firstAttribute="height" constant="21" id="ibY-dJ-OSj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.052575641521148464" green="1" blue="0.074830772264475542" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xhw-Xg-63f" secondAttribute="bottom" id="5CO-j1-c2X"/>
-                            <constraint firstItem="Dyq-dK-t35" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="MAr-1m-bNH"/>
-                            <constraint firstAttribute="centerX" secondItem="Dyq-dK-t35" secondAttribute="centerX" id="Nau-0U-Dc5"/>
                             <constraint firstItem="Xhw-Xg-63f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="els-5Q-Zvr"/>
                             <constraint firstAttribute="trailing" secondItem="Xhw-Xg-63f" secondAttribute="trailing" id="uP9-Ae-dNy"/>
                         </constraints>
-                        <connections>
-                            <outlet property="titleLabel" destination="Dyq-dK-t35" id="ODP-83-7zt"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
