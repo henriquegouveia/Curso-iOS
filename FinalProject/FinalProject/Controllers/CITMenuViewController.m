@@ -9,7 +9,7 @@
 #import "CITMenuViewController.h"
 #import "CITClientsTableViewController.h"
 
-@interface CITMenuViewController ()
+@interface CITMenuViewController () <ClientsTableViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *clientList;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (weak, nonatomic) IBOutlet UIView *loadingView;
+
+
 
 @end
 
@@ -55,7 +57,13 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"Banana"]) {
+        CITClientsTableViewController *ctrl = (CITClientsTableViewController *) segue.destinationViewController ;
+        ctrl.delegate = self;
+    }
 }
+
+
 
 #pragma mark - Clients Table Delegate
 
@@ -67,6 +75,10 @@
 }
 
 - (void)finishLoad {
+    [self.loadingView removeFromSuperview];
+}
+
+- (void) didFinishDataLoad{
     [self.loadingView removeFromSuperview];
 }
 

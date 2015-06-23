@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Client.h">
+   </FileRef>
+   <FileRef
+      location = "group:Client.m">
+   </FileRef>
+   <FileRef
       location = "group:FinalProject.xcodeproj">
    </FileRef>
    <FileRef

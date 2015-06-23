@@ -7,7 +7,19 @@
 //
 
 #import "CITLoginViewController.h"
+#import "CITDataAccess+Clients.h"
+
+@interface CITLoginViewController ()
+
+@end
 
 @implementation CITLoginViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [CITDataAccess getClientByName:@"Aaron Collins" withCompletionBlock:^(NSArray *result) {
+        NSLog(@"%@", result);
+    }];
+}
 
 @end

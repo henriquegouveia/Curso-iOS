@@ -7,9 +7,11 @@
 //
 
 #import "CITDataAccess.h"
+#import "CITClient.h"
 
 @interface CITDataAccess (Clients)
 
-+ (void)insertClient:(id /*your entity*/)client withCompletionBlock:(void(^)(BOOL status))completion;
++ (void)insertClient:(CITClient *)client withCompletionBlock:(void(^)(BOOL status))completion;
++ (void)getClientByName:(NSString *)name withCompletionBlock:(CITDataAccessQueryResponse)completion;
 
 @end

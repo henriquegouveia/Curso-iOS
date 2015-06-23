@@ -17,7 +17,15 @@
     client.email = [json objectForKey:@"email"];
     client.gender = [json objectForKey:@"gender"];
     client.phoneNumber = [json objectForKey:@"phoneNumber"];
+    client.age = arc4random_uniform(99);
     
+    return client;
+}
+
++ (instancetype)populateFromResultSet:(FMResultSet *)resultSet {
+    CITClient *client = [CITClient new];
+    client.firstName = [resultSet stringForColumn:@"name"];
+    client.phoneNumber = [resultSet stringForColumn:@"phonenumber"];
     return client;
 }
 

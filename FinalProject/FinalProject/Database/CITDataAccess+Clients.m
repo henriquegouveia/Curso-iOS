@@ -7,13 +7,19 @@
 //
 
 #import "CITDataAccess+Clients.h"
+#import "CITClient.h"
+
+static NSString * const kInsertClient = @"INSERT INTO bla VALUES (?, ?);";
+static NSString * const kSelectClientByName = @"SELECT * FROM bla WHERE name LIKE ?;";
 
 @implementation CITDataAccess (Clients)
 
-+ (void)insertClient:(id /*your entity*/)client withCompletionBlock:(void(^)(BOOL status))completion {
++ (void)insertClient:(CITClient *)client withCompletionBlock:(void(^)(BOOL status))completion {
     CITDatabaseQueue *queue = [[CITDatabaseManager sharedManager] databaseQueue];
     [queue inTransaction:^(FMDatabase *db, BOOL *rollback) {
-        BOOL success = [db executeUpdate:nil/*query here*/ withArgumentsInArray:@[]/*parameters here*/];
+        BOOL success = [db executeUpdate:kInsertClient
+                    withArgumentsInArray:@[client.formattedName,
+                                           client.phoneNumber]];
         if(!success){
             *rollback = YES;
             completion (success);
@@ -21,6 +27,22 @@
         
         completion(success);
         
+    }];
+}
+
++ (void)getClientByName:(NSString *)name withCompletionBlock:(CITDataAccessQueryResponse)completion {
+    CITDatabaseQueue *queue = [[CITDatabaseManager sharedManager] databaseQueue];
+    [queue inDatabase:^(FMDatabase *db) {
+        FMResultSet *resultSet = [db executeQuery:kSelectClientByName withArgumentsInArray:@[name]];
+        
+        NSMutableArray *clients = [NSMutableArray array];
+        
+        while (resultSet.next) {
+            CITClient *client = [CITClient populateFromResultSet:resultSet];
+            [clients addObject:client];
+        }
+        
+        completion(clients);
     }];
 }
 

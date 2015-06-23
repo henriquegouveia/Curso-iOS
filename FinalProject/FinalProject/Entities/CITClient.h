@@ -31,6 +31,7 @@
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *phoneNumber;
 @property (readonly, nonatomic) NSString *formattedName;
+@property (nonatomic) NSInteger age;
 
 @property (strong, nonatomic) UIImage *image;
 @property (readonly, nonatomic) NSURL *pictureURL;

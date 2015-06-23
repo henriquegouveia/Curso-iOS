@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "CITDatabaseManager.h"
+#import "CITDatabaseSchema.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [CITDatabaseManager registerDatabase:@"database" forUser:@"curso" withDatabaseSchema:[CITDatabaseSchema new]];
+    [[CITDatabaseManager sharedManager] setup];
+    
     return YES;
 }
 

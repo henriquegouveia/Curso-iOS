@@ -7,7 +7,7 @@
 //
 
 #import "CITClientCustomCell.h"
-
+#import "CITHTTPSessionManager+Image.h"
 @interface CITClientCustomCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *clientPicture;
@@ -46,7 +46,14 @@
 }
 
 - (void)requestImageFromWeb:(CITClient *)client {
-  
+    
+    typeof(self) __block __weak weakSelf = self;
+    typeof(client) __block __weak weakClient = client;
+    
+  [CITHTTPSessionManager getImage:client.pictureURL withCompletionBlock:^(UIImage *image) {
+      weakClient.image = image;
+      weakSelf.clientPicture.image = client.image;
+  }];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "CITClientsTableViewController.h"
 #import "CITHTTPSessionManager+Clients.h"
+#import "CITDataAccess+Clients.h"
 #import "CITClientCustomCell.h"
 
 static NSString * const kCellIdentifier = @"clientCustomCell";
@@ -22,6 +23,14 @@ static NSString * const kCellIdentifier = @"clientCustomCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [CITHTTPSessionManager getAllClientsWithCompletionBlock:^(NSArray *results) {
+        self.clients = results;
+        
+        [self.tableView reloadData];
+        [self.delegate didFinishDataLoad];
+    }];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -34,12 +43,14 @@ static NSString * const kCellIdentifier = @"clientCustomCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CITClientCustomCell *customCell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
-    
+    [customCell populateCellWithObject:self.clients[indexPath.row]];
+            
     return customCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //this method returns what cell was selected
+    
 }
 
 @end

@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "CITClient.h"
 
+@protocol ClientsTableViewControllerDelegate;
+
 @interface CITClientsTableViewController : UITableViewController
+
+@property (weak, nonatomic) id<ClientsTableViewControllerDelegate> delegate;
+
+@end
+
+@protocol ClientsTableViewControllerDelegate <NSObject>
+
+- (void)didFinishDataLoad;
 
 @end

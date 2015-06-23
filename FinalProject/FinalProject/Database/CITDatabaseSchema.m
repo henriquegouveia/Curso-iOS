@@ -21,7 +21,7 @@
     
 }
 - (NSArray *)createTableQueries {
-    return nil;
+    return @[@"CREATE TABLE bla (name TEXT, phonenumber TEXT)"];
 }
 
 @end

@@ -36,6 +36,8 @@
 		AEC4343B1AA7D809000F1CA8 /* CITKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4343A1AA7D809000F1CA8 /* CITKeychain.m */; };
 		AEC4343E1AA7F05F000F1CA8 /* CITClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC4343D1AA7F05F000F1CA8 /* CITClient.m */; };
 		AEC434421AA7F7BD000F1CA8 /* CITClientCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC434411AA7F7BD000F1CA8 /* CITClientCustomCell.m */; };
+		AEDBDD0B1B30C7FF009856C5 /* CITHTTPSessionManager+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDBDD0A1B30C7FF009856C5 /* CITHTTPSessionManager+Image.m */; };
+		AEDBDD0E1B30E5B6009856C5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEDBDD0C1B30E5B6009856C5 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,9 @@
 		AEC4343D1AA7F05F000F1CA8 /* CITClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITClient.m; sourceTree = "<group>"; };
 		AEC434401AA7F7BD000F1CA8 /* CITClientCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CITClientCustomCell.h; path = Controllers/CITClientCustomCell.h; sourceTree = "<group>"; };
 		AEC434411AA7F7BD000F1CA8 /* CITClientCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CITClientCustomCell.m; path = Controllers/CITClientCustomCell.m; sourceTree = "<group>"; };
+		AEDBDD091B30C7FF009856C5 /* CITHTTPSessionManager+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CITHTTPSessionManager+Image.h"; sourceTree = "<group>"; };
+		AEDBDD0A1B30C7FF009856C5 /* CITHTTPSessionManager+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CITHTTPSessionManager+Image.m"; sourceTree = "<group>"; };
+		AEDBDD0D1B30E5B6009856C5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +186,7 @@
 				AEC433D31AA7D263000F1CA8 /* Images.xcassets */,
 				AEC433D51AA7D263000F1CA8 /* LaunchScreen.xib */,
 				AEC433C61AA7D263000F1CA8 /* Supporting Files */,
+				AEDBDD0C1B30E5B6009856C5 /* Model.xcdatamodeld */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				AEC4340A1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m */,
 				AEC4340B1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.h */,
 				AEC4340C1AA7D2FD000F1CA8 /* CITHTTPSessionManager+Login.m */,
+				AEDBDD091B30C7FF009856C5 /* CITHTTPSessionManager+Image.h */,
+				AEDBDD0A1B30C7FF009856C5 /* CITHTTPSessionManager+Image.m */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -493,8 +501,10 @@
 				AEC434191AA7D2FD000F1CA8 /* CITDatabaseQueue.m in Sources */,
 				AEC434221AA7D2FD000F1CA8 /* CITHTTPSessionManager+Clients.m in Sources */,
 				AEC4341C1AA7D2FD000F1CA8 /* NSString+Additions.m in Sources */,
+				AEDBDD0B1B30C7FF009856C5 /* CITHTTPSessionManager+Image.m in Sources */,
 				AEC434251AA7D2FD000F1CA8 /* CITDataAccess+Clients.m in Sources */,
 				AEC4343B1AA7D809000F1CA8 /* CITKeychain.m in Sources */,
+				AEDBDD0E1B30E5B6009856C5 /* Model.xcdatamodeld in Sources */,
 				AEC433CC1AA7D263000F1CA8 /* AppDelegate.m in Sources */,
 				AEC434261AA7D2FD000F1CA8 /* CITDatabaseSchema.m in Sources */,
 				AEC433C91AA7D263000F1CA8 /* main.m in Sources */,
@@ -633,8 +643,30 @@
 			baseConfigurationReference = 4E743903973C7E709126B24E /* Pods-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"$(inherite)",
+					/Users/hgouveia/Desktop/ThirdProject/ThirdProject,
+				);
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-FinalProject-AFNetworking\"",
+					"-l\"Pods-FinalProject-FMDB\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -644,8 +676,30 @@
 			baseConfigurationReference = 2EC5A6F05F650563DB9CD71E /* Pods-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FMDB\"",
+					"$(inherite)",
+					/Users/hgouveia/Desktop/ThirdProject/ThirdProject,
+				);
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-FinalProject-AFNetworking\"",
+					"-l\"Pods-FinalProject-FMDB\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -715,6 +769,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEDBDD0C1B30E5B6009856C5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEDBDD0D1B30E5B6009856C5 /* Model.xcdatamodel */,
+			);
+			currentVersion = AEDBDD0D1B30E5B6009856C5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AEC433BB1AA7D263000F1CA8 /* Project object */;
 }

@@ -15,6 +15,19 @@ static NSString * const kClientsPath = @"clients";
 @implementation CITHTTPSessionManager (Clients)
 
 + (void)getAllClientsWithCompletionBlock:(CITRequestResults)completion {
+    [[self sharedInstance] GET:kClientsPath parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+
+        NSMutableArray *clients = [NSMutableArray array];
+        for (NSDictionary *clientsDict in responseObject) {
+            CITClient *client = [CITClient populateFromJSON:clientsDict];
+            [clients addObject:client];
+        }
+        
+        completion(clients);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        completion(nil);
+    }];
 }
 
 @end
