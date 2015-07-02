@@ -24,7 +24,7 @@
 
 + (instancetype)populateFromResultSet:(FMResultSet *)resultSet {
     CITClient *client = [CITClient new];
-    client.firstName = [resultSet stringForColumn:@"name"];
+    client.firstName = [resultSet stringForColumn:@"firstName"];
     client.phoneNumber = [resultSet stringForColumn:@"phonenumber"];
     return client;
 }

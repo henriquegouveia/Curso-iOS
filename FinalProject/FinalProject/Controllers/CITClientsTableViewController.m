@@ -10,12 +10,14 @@
 #import "CITHTTPSessionManager+Clients.h"
 #import "CITDataAccess+Clients.h"
 #import "CITClientCustomCell.h"
+#import "CITClientsHandler.h"
 
 static NSString * const kCellIdentifier = @"clientCustomCell";
 
 @interface CITClientsTableViewController ()
 
 @property (strong, nonatomic) NSArray *clients;
+@property (strong, nonatomic) NSArray *cachedClients;
 
 @end
 
@@ -23,14 +25,21 @@ static NSString * const kCellIdentifier = @"clientCustomCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self getAllClients];
+}
+
+-(void)getAllClients{
     [CITHTTPSessionManager getAllClientsWithCompletionBlock:^(NSArray *results) {
-        self.clients = results;
+        self.cachedClients = results;
+        self.clients = self.cachedClients;
         
+
+        
+//        NSArray *onlyPhoneNumber = [CITClientsHandler getPhoneNumber:self.clients];
+//        NSArray *completeName = [CITClientsHandler getName:self.clients];
         [self.tableView reloadData];
         [self.delegate didFinishDataLoad];
     }];
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -39,6 +48,38 @@ static NSString * const kCellIdentifier = @"clientCustomCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.clients.count;
+}
+
+- (void)getAll{
+    self.clients = self.cachedClients;
+    
+    [self.tableView reloadData];
+}
+
+- (void)getMale{
+    NSArray *resultMale = [CITClientsHandler getMale:self.cachedClients];
+    
+    self.clients = resultMale;
+    [self.tableView reloadData];
+}
+
+- (void)getAle{
+   
+//    NSArray *resultAle = [CITClientsHandler getAleNameOrLastName:self.cachedClients];
+//    
+//    self.clients = resultAle;
+//    [self.tableView reloadData];
+    
+    [self getAleDatabase];
+}
+
+
+- (void)getXing{
+    
+    NSArray *xingResult = [CITClientsHandler getAllXing:self.cachedClients];
+    
+    self.clients = xingResult;
+    [self.tableView reloadData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,6 +92,13 @@ static NSString * const kCellIdentifier = @"clientCustomCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //this method returns what cell was selected
     
+}
+
+-(void)getAleDatabase{
+    [CITDataAccess getClientByName:@"ale" withCompletionBlock:^(NSArray *result) {
+        self.clients = result;
+        [self.tableView reloadData];
+    }];
 }
 
 @end

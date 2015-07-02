@@ -9,8 +9,8 @@
 #import "CITDataAccess+Clients.h"
 #import "CITClient.h"
 
-static NSString * const kInsertClient = @"INSERT INTO bla VALUES (?, ?);";
-static NSString * const kSelectClientByName = @"SELECT * FROM bla WHERE name LIKE ?;";
+static NSString * const kInsertClient = @"INSERT INTO Clients VALUES (?, ?, ?, ?, ?);";
+static NSString * const kSelectClientByName = @"SELECT * FROM Clients WHERE lastName LIKE ?;";
 
 @implementation CITDataAccess (Clients)
 
@@ -18,7 +18,10 @@ static NSString * const kSelectClientByName = @"SELECT * FROM bla WHERE name LIK
     CITDatabaseQueue *queue = [[CITDatabaseManager sharedManager] databaseQueue];
     [queue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         BOOL success = [db executeUpdate:kInsertClient
-                    withArgumentsInArray:@[client.formattedName,
+                    withArgumentsInArray:@[client.firstName,
+                                           client.lastName,
+                                           client.gender,
+                                           client.email,
                                            client.phoneNumber]];
         if(!success){
             *rollback = YES;
@@ -44,6 +47,9 @@ static NSString * const kSelectClientByName = @"SELECT * FROM bla WHERE name LIK
         
         completion(clients);
     }];
+    
 }
+
+
 
 @end

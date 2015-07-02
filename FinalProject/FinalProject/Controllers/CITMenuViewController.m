@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (weak, nonatomic) IBOutlet UIView *loadingView;
-
+@property (weak, nonatomic) CITClientsTableViewController *clientsTableView;
 
 
 @end
@@ -43,6 +43,30 @@
     }
 }
 
+
+- (IBAction)filter:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            [self.clientsTableView getAll];
+            break;
+        
+        case 1:
+            [self.clientsTableView getMale];
+            break;
+        
+        case 2:
+            [self.clientsTableView getAle];
+            break;
+            
+        case 3:
+            [self.clientsTableView getXing];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 - (IBAction)closeMenu:(UIGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateBegan) {
         self.clientList.userInteractionEnabled = NO;
@@ -58,8 +82,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"Banana"]) {
-        CITClientsTableViewController *ctrl = (CITClientsTableViewController *) segue.destinationViewController ;
-        ctrl.delegate = self;
+        self.clientsTableView = (CITClientsTableViewController *) segue.destinationViewController ;
+        self.clientsTableView.delegate = self;
     }
 }
 

@@ -21,7 +21,11 @@
     
 }
 - (NSArray *)createTableQueries {
-    return @[@"CREATE TABLE bla (name TEXT, phonenumber TEXT)"];
+    return @[@"CREATE TABLE Clients (firstName TEXT,\
+                                     lastName TEXT,\
+                                     gender TEXT,\
+                                     email TEXT,\
+                                     phoneNumber TEXT)"];
 }
 
 @end

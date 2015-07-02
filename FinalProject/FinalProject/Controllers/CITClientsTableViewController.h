@@ -15,6 +15,12 @@
 
 @property (weak, nonatomic) id<ClientsTableViewControllerDelegate> delegate;
 
+- (void)getMale;
+- (void)getAll;
+- (void)getAle;
+- (void)getXing;
+- (void)getAleDatabase;
+
 @end
 
 @protocol ClientsTableViewControllerDelegate <NSObject>

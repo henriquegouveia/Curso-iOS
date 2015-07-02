@@ -20,9 +20,12 @@ static NSString * const kClientsPath = @"clients";
         NSMutableArray *clients = [NSMutableArray array];
         for (NSDictionary *clientsDict in responseObject) {
             CITClient *client = [CITClient populateFromJSON:clientsDict];
-            [clients addObject:client];
+            [CITDataAccess insertClient:client withCompletionBlock:^(BOOL status) {
+                if(status){
+                  [clients addObject:client];
+                }
+            }];
         }
-        
         completion(clients);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

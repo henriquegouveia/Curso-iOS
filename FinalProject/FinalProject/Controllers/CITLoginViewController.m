@@ -17,9 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [CITDataAccess getClientByName:@"Aaron Collins" withCompletionBlock:^(NSArray *result) {
-        NSLog(@"%@", result);
-    }];
 }
 
 @end
